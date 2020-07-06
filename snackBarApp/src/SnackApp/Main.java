@@ -19,40 +19,50 @@ public class Main {
         Snack water = new Snack("Water", 20, 2.75F, v2.getId());
 
         // Processing
-        System.out.println("Welcome to Snack Bar");
+        System.out.println("Welcome to Snack Bar \n");
 
-        System.out.println("Jane buys three sodas");
+        System.out.println("\n Jane buys three sodas");
         jane.buySnacks(soda, 3);
         System.out.println("Jane has " + jane.getCash());
         System.out.println("There are " + soda.getQuantity() + " sodas left.");
 
-        System.out.println("Jane buys a bag of pretzels");
+        System.out.println("\n Jane buys a bag of pretzels");
         jane.buySnacks(pretzels, 1);
         System.out.println("Jane has " + jane.getCash());
         System.out.println("There are " + pretzels.getQuantity() + " pretzels left.");
 
-        System.out.println("Bob buys two sodas");
+        System.out.println("\n Bob buys two sodas");
         bob.buySnacks(soda, 2);
         System.out.println("Bob has " + bob.getCash());
         System.out.println("There are " + soda.getQuantity() + " sodas left.");
 
-        System.out.println("Jane finds $10");
+        System.out.println("\n Jane finds $10");
         jane.addCash(10);
         System.out.println("Jane has " + jane.getCash());
 
-        System.out.println("jane buys two chocolate bars");
+        System.out.println("\n Jane buys two chocolate bars");
         jane.buySnacks(chocolateBar, 2);
         System.out.println("Jane has " + jane.getCash());
         System.out.println("There are " + chocolateBar.getQuantity() + " Chocolate bars left.");
 
-        System.out.println("Pretzels restocked");
+        System.out.println("\n Pretzels restocked");
         pretzels.addQuantity(12);
         System.out.println("There are " + pretzels.getQuantity() + " Pretzels left.");
 
-        System.out.println("Bob buys three bags of pretzels");
+        System.out.println("\n Bob buys three bags of pretzels");
         bob.buySnacks(pretzels, 3);
         System.out.println("Bob has " + bob.getCash());
         System.out.println("There are " + pretzels.getQuantity() + " pretzels left.");
+
+        // Stretch Goals
+            Snack[] snacks = {chips, chocolateBar, pretzels, soda, water};
+
+            System.out.println("Available Snacks \n");
+            for (Snack snack : snacks) {
+                System.out.print("\n" + snack.getName() + "\n");
+                System.out.print(snack.getVendingMachineId() + "\n");
+                System.out.print(snack.getTotalCost() + "\n");
+            }
     }
 
     public static void main(String[] args) {
