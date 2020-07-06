@@ -23,10 +23,10 @@ public class Customer {
         this.cash += amount;
     }
 
-    public void buySnacks(Object snackName, int snackAmount, float price) {
-        this.cash -= price;
-
-        // snackName.buySnack(snackAmount);
+    public void buySnacks(Snack snackName, int snackAmount) {
+        snackName.buySnack(snackAmount);
+        
+        this.cash -= snackName.getCostOfAmount(snackAmount);
     }
 
     // Getters

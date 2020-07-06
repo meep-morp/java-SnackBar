@@ -1,7 +1,5 @@
 package snackBarApp.src.SnackApp;
 
-import java.lang.reflect.Array;
-
 public class Main {
 
     private static void workWithData() {
@@ -24,14 +22,17 @@ public class Main {
         System.out.println("Welcome to Snack Bar");
 
         System.out.println("Jane buys three sodas");
+        jane.buySnacks(soda, 3);
         System.out.println("Jane has " + jane.getCash());
         System.out.println("There are " + soda.getQuantity() + " sodas left.");
 
         System.out.println("Jane buys a bag of pretzels");
+        jane.buySnacks(pretzels, 1);
         System.out.println("Jane has " + jane.getCash());
         System.out.println("There are " + pretzels.getQuantity() + " pretzels left.");
 
         System.out.println("Bob buys two sodas");
+        bob.buySnacks(soda, 2);
         System.out.println("Bob has " + bob.getCash());
         System.out.println("There are " + soda.getQuantity() + " sodas left.");
 
@@ -40,13 +41,16 @@ public class Main {
         System.out.println("Jane has " + jane.getCash());
 
         System.out.println("jane buys two chocolate bars");
+        jane.buySnacks(chocolateBar, 2);
         System.out.println("Jane has " + jane.getCash());
         System.out.println("There are " + chocolateBar.getQuantity() + " Chocolate bars left.");
 
         System.out.println("Pretzels restocked");
+        pretzels.addQuantity(12);
         System.out.println("There are " + pretzels.getQuantity() + " Pretzels left.");
 
         System.out.println("Bob buys three bags of pretzels");
+        bob.buySnacks(pretzels, 3);
         System.out.println("Bob has " + bob.getCash());
         System.out.println("There are " + pretzels.getQuantity() + " pretzels left.");
     }
