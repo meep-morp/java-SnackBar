@@ -11,7 +11,7 @@ public class VendingMachine {
 
     public VendingMachine(String name) {
         maxId++;
-        id = maxId;
+        this.id = maxId;
 
         this.name = name;
     }
@@ -20,6 +20,10 @@ public class VendingMachine {
 
     public String getName() {
         return name;
+    }
+
+    public int getId() {
+        return id;
     }
 
     // Setters

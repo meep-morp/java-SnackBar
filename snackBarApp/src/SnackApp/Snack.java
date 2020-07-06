@@ -17,15 +17,24 @@ public class Snack {
         maxId++;
         id = maxId;
         this.name = name;
+        this.quantity = quantity;
+        this.cost = cost;
+        this.vendingMachineId = vendingMachineId;
+    }
+
+    // Methods
+
+    public void addQuantity(int amount) {
+        this.quantity += amount;
+    }
+
+    public void buySnack(int amount) {
+        this.quantity -= amount;
     }
 
     // Setters
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
     public void setCost(float cost) {
@@ -37,6 +46,14 @@ public class Snack {
     }
 
     // Getters
+
+    public double getTotalCost() {
+        return cost * quantity;
+    }
+
+    public double getCostOfAmount(int amount) {
+        return cost * amount;
+    }
 
     public int getId() {
         return id;

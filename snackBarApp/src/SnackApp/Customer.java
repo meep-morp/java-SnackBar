@@ -9,7 +9,31 @@ public class Customer {
     private String name;
     private float cash;
 
+    //Constructor
+    public Customer(String name, float cash) {
+        maxId++;
+        id = maxId;
+
+        this.name = name;
+        this.cash = cash;
+    }
+
+    // Methods 
+    public void addCash(float amount) {
+        this.cash += amount;
+    }
+
+    public void buySnacks(Object snackName, int snackAmount, float price) {
+        this.cash -= price;
+
+        // snackName.buySnack(snackAmount);
+    }
+
     // Getters
+    public float getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
